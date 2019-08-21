@@ -1,6 +1,6 @@
 package Learning.Part2OOP
 
-import sun.plugin.dom.css.Counter
+
 
 object OOBasic extends App {
 
@@ -61,7 +61,6 @@ class Novel(name: String, releaseDate: Int, author: Writer) {
 class Writer(fName: String, lName: String, val dob: Int) {
   def FullName: String = s"${fName} ${lName}"
 
-  //  val bi = age
 
 }
 
