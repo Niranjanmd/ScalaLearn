@@ -10,6 +10,8 @@ object MethodNotations extends  App {
 
     def -(p:person):String=s"${this.name} don't like ${p.name}"
 
+
+
     def unary_! = "You Bang"
 
     def isAlive : Boolean = true
