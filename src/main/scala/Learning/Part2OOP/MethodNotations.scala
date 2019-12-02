@@ -26,7 +26,7 @@ object MethodNotations extends  App {
 
   println(mary.likes("Inception"))
 
-  //infix notation
+  //INFIX NOTATION
   println(mary likes "Inception")
 
   println(mary likes "inc")
@@ -37,7 +37,7 @@ object MethodNotations extends  App {
 
   println(mary - tom) // operators are not reserved in scala
 
-  //prefix notation
+  //PREFIX NOTATION
   val x = -1  //equivalent to 1.unary_-
 
   val y = 1.unary_-

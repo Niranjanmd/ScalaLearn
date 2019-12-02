@@ -27,10 +27,10 @@ object OOBasic extends App {
 
   val counter = new counter
 
-  counter.inc.print
-  counter.inc(5).print
 //  counter.inc.print
-  counter.dec(2).print
+//  counter.inc(5).print
+////  counter.inc.print
+//  counter.dec(2).print
 //  counter.dec.print
 
 }
@@ -64,7 +64,6 @@ class Writer(fName: String, lName: String, val dob: Int) {
 
 }
 
-
 class counter(val i: Int = 0) {
 
   def inc ={
@@ -74,7 +73,6 @@ class counter(val i: Int = 0) {
 
   def dec = {
     println("Decrementing")
-
     new counter(i - 1)
   }
 
@@ -87,7 +85,6 @@ class counter(val i: Int = 0) {
     else
     inc.inc(count-1)
   }
-
 
   def dec(count:Int):counter={
     if(count<=0) this
