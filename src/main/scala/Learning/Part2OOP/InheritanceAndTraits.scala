@@ -59,6 +59,6 @@ object InheritanceAndTraits extends App{
 
   class Adult(name :String,age:Int,idCard :String) extends Person(name ,age)  // parent class has to Constructed before child
 
-  class Minor(name :String,age:Int,idCard :String) extends Person(name)  // this is possible by using auxiliary constructor
+  class Minor(name :String,age:Int) extends Person(name)  // this is possible by using auxiliary constructor
 
 }

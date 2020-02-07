@@ -1,1 +1,6 @@
-.idea
+target/*
+project/project/*
+project/target/*
+.idea/*
+spark-warehouse/*
+src/main/scala/resources/output/*
