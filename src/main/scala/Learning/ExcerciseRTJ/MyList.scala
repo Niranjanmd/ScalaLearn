@@ -1,6 +1,6 @@
 package Learning.ExcerciseRTJ
 
-abstract class MyList {
+trait MyList[A] {
   /*
   HEAD
   TAIL
@@ -9,11 +9,11 @@ abstract class MyList {
   toString
    */
 
-  def head: Int
+  def head: A
 
-  def tail: MyList
+  def tail: MyList[A]
 
-  def add(element: Int): MyList
+  def add(element: A): MyList[A]
 
   def isEmpty: Boolean
 
@@ -22,24 +22,24 @@ abstract class MyList {
   override def toString: String = "[" + printList + "]"
 }
 
-class Empty extends MyList {
-  override def head: Int = ???
+class Empty[A] extends MyList[A] {
+  override def head: A = ???
 
-  override def tail: MyList = ???
+  override def tail: MyList[A] = ???
 
-  override def add(element: Int): MyList = ???
+  override def add(element: A): MyList[A] = ???
 
   override def isEmpty: Boolean = true
 
   override def printList: String = ""
 }
 
-class Cons(h: Int, t: MyList) extends MyList {
-  override def head: Int = h
+class Cons[A](h: A, t: MyList[A]) extends MyList[A] {
+  override def head: A = h
 
-  override def tail: MyList = t
+  override def tail: MyList[A] = t
 
-  override def add(element: Int): MyList = new Cons(element, this)
+  override def add(element: A): MyList[A] = new Cons(element, this)
 
   override def isEmpty: Boolean = false
 
@@ -56,7 +56,7 @@ class Cons(h: Int, t: MyList) extends MyList {
 
 object TestList extends App {
 
-  val list = new Cons(1, new Cons(2,new Cons(3,new Empty)))
+  val list = new Cons("A", new Cons("B",new Cons("C",new Empty)))
 
   println(list.head)
 

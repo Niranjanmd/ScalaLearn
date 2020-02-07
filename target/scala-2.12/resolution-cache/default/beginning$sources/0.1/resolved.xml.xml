@@ -4,7 +4,7 @@
 		module="beginning$sources"
 		revision="0.1"
 		status="integration"
-		publication="20190826101944"
+		publication="20200104013457"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

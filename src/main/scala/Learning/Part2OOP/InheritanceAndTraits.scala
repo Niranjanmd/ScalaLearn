@@ -10,7 +10,7 @@ protected can be accessed only inside the child class
 
 Constructor - auxiliary constructor
 
-OVERRIDING - scala allow to override VALUES(VAL), VARIABLES(VALS) and FUNCTIONS(DEF)
+OVERRIDING - scala allow to override VALUES(VAL), VARIABLES(VARS) and FUNCTIONS(DEF)
 
 PREVENT OVERRIDE
 using keyword final on member
