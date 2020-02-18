@@ -5,6 +5,12 @@ val y = 20
 
 print(x>y )
 
+val str = "/a/n/b/d/e/d"
+
+println(str.substring(1))
+
+println(str.substring(1).split("/").toList)
+
 
 
 println("hello")

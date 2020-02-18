@@ -1,6 +1,6 @@
 package Learning.ExcerciseRTJ
 
-trait MyList[A] {
+abstract class MyList[+A] {
   /*
   HEAD
   TAIL
@@ -13,33 +13,57 @@ trait MyList[A] {
 
   def tail: MyList[A]
 
-  def add(element: A): MyList[A]
+  def add[B>:A](element: B): MyList[B]
 
   def isEmpty: Boolean
 
   def printList: String
 
+  def Map[B](transformer: MyTransform[A,B]):MyList[B]
+
+  def flatMap[B](transformer :MyTransform[A,MyList[B]]):MyList[B]
+
+  def filter(predicate: MyPredicate[A]):MyList[A]
+
+  def ++[B>:A](list:MyList[B]):MyList[B]
+
   override def toString: String = "[" + printList + "]"
 }
 
-class Empty[A] extends MyList[A] {
-  override def head: A = ???
+trait MyPredicate[-T]{
+  def test[T](a:T):Boolean
+}
 
-  override def tail: MyList[A] = ???
+trait MyTransform[-A,B] {
+  def transform(element:A):B
+}
 
-  override def add(element: A): MyList[A] = ???
+object Empty extends MyList[Nothing] {
+  override def head: Nothing = ???
+
+  override def tail: Nothing = ???
+
+  override def add[B>:Nothing](element: B): MyList[B] = ???
 
   override def isEmpty: Boolean = true
 
   override def printList: String = ""
+
+   override def Map[B](transformer: MyTransform[Nothing, B]): MyList[B] = Empty
+
+   override def flatMap[B](transformer: MyTransform[Nothing, MyList[B]]): MyList[B] = Empty
+
+   override def filter(predicate: MyPredicate[Nothing]): MyList[Nothing] = Empty
+
+  override def ++[B >: Nothing](list: MyList[B]): MyList[B] = list
 }
 
-class Cons[A](h: A, t: MyList[A]) extends MyList[A] {
+class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
   override def head: A = h
 
   override def tail: MyList[A] = t
 
-  override def add(element: A): MyList[A] = new Cons(element, this)
+  override def add[B>:A](element: B): MyList[B] = new Cons(element, this)
 
   override def isEmpty: Boolean = false
 
@@ -52,17 +76,59 @@ class Cons[A](h: A, t: MyList[A]) extends MyList[A] {
     }
 
   }
+
+  override def Map[B](transformer: MyTransform[A, B]): MyList[B] = {
+    new Cons(transformer.transform(h),t.Map(transformer))
+  }
+
+  override def flatMap[B](transformer: MyTransform[A, MyList[B]]): MyList[B] = transformer.transform(h) ++ tail.flatMap(transformer)
+
+  override def filter(predicate: MyPredicate[A]): MyList[A] = {
+    if(predicate.test(h)) new Cons(h,t.filter(predicate))
+    else t.filter(predicate)
+  }
+
+  override def ++[B >: A](list: MyList[B]): MyList[B] = {
+    new Cons(head, t ++ list)
+  }
+
+
+
 }
+
 
 object TestList extends App {
 
-  val list = new Cons("A", new Cons("B",new Cons("C",new Empty)))
+  val list = new Cons("A", new Cons("B",new Cons("C", Empty)))
 
-  println(list.head)
+  val listOfInts = new Cons(1,new Cons(2,new Cons(3,Empty)))
 
-  println(list.toString)
+//  println(list.head)
+//
+//  println(list.toString)
 
-  val empty = new Empty
+  println(listOfInts)
 
-  empty.isEmpty
+ println(listOfInts.filter(new MyPredicate[Int] {
+   override def test[T](a: T): Boolean = a==2
+ }).toString)
+
+  listOfInts.filter(new MyPredicate[Int] {
+    override def test[T](a: T): Boolean = a ==12
+  })
+
+  println(listOfInts.Map(new MyTransform[Int,Int] {
+    override def transform(element: Int): Int = element * 2
+  }))
+
+  println(listOfInts.flatMap(new MyTransform[Int,MyList[Int]] {
+    override def transform(element: Int): MyList[Int] = new Cons[Int](element,new Cons[Int](element+1,Empty))
+  }))
+
+
+  println(listOfInts.flatMap((element: Int) => new Cons[Int](element, new Cons[Int](element + 1, Empty))))
+
+//  println(listOfInts.Map((element: Int) => element * 2))
+
+
 }

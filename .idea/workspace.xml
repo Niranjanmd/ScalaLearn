@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4cc31b3-6bc2-42ad-b57a-31593158d9e3" name="Default Changelist" comment="Continued Learning">
-      <change afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Learning/Part2OOP/Generics.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Learning/ScalaForImpatient/Inheritance.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Learning/ScalaForImpatient/RemoveNegative.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Beginning-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Beginning-build.iml" afterDir="false" />
+    <list default="true" id="b4cc31b3-6bc2-42ad-b57a-31593158d9e3" name="Default Changelist" comment="negative numbers in array">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Learning/ExcerciseRTJ/Exercise2.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/beginning-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/beginning-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/beginning-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/beginning-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
@@ -24,8 +20,7 @@
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Learning/ExcerciseRTJ/MyList.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Learning/ExcerciseRTJ/MyList.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Learning/Part2OOP/InheritanceAndTraits.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Learning/Part2OOP/InheritanceAndTraits.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Learning/ScalaForImpatient/ConditionBlock.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Learning/ScalaForImpatient/ConditionBlock.sc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/beginning$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/beginning$sources/0.1/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/beginning$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/beginning$sources/0.1/resolved.xml.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-beginning$sources-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-beginning$sources-compile-internal.xml" afterDir="false" />
@@ -39,7 +34,6 @@
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-beginning$sources-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-beginning$sources-scala-tool.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-beginning$sources-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-beginning$sources-test-internal.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-beginning$sources-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-beginning$sources-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +48,13 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,20 +92,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.RemoveNegative">
-    <configuration name="AbstructDataTypes" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Learning.Part2OOP.AbstructDataTypes" />
-      <module name="Beginning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Learning.Part2OOP.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TestList">
     <configuration name="Inheritance" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Learning.ScalaForImpatient.Inheritance" />
       <module name="Beginning" />
@@ -120,6 +108,19 @@
     </configuration>
     <configuration name="InheritanceAndTraits" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Learning.Part2OOP.InheritanceAndTraits" />
+      <module name="Beginning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Learning.Part2OOP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MethodNotations" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Learning.Part2OOP.MethodNotations" />
       <module name="Beginning" />
       <extension name="coverage">
         <pattern>
@@ -159,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestList" />
+        <item itemvalue="Application.MethodNotations" />
         <item itemvalue="Application.RemoveNegative" />
         <item itemvalue="Application.InheritanceAndTraits" />
         <item itemvalue="Application.Inheritance" />
-        <item itemvalue="Application.TestList" />
-        <item itemvalue="Application.AbstructDataTypes" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +195,6 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="3131076032968" />
         <entry key="$PROJECT_DIR$/build.sbt" value="2611684972" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="1396028727" />
       </map>
@@ -231,7 +231,15 @@
       <workItem from="1578082121286" duration="988000" />
       <workItem from="1578162831107" duration="16000" />
       <workItem from="1578208156930" duration="631000" />
-      <workItem from="1581097540748" duration="3597000" />
+      <workItem from="1581097540748" duration="3767000" />
+      <workItem from="1581353917325" duration="288000" />
+      <workItem from="1581401212406" duration="675000" />
+      <workItem from="1581438626538" duration="598000" />
+      <workItem from="1581442403966" duration="1791000" />
+      <workItem from="1581615099064" duration="5796000" />
+      <workItem from="1581672529136" duration="2195000" />
+      <workItem from="1581867889776" duration="945000" />
+      <workItem from="1581914848347" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="Continued Learning">
       <created>1575123570103</created>
@@ -261,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575133573043</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="negative numbers in array">
+      <created>1581101335701</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581101335701</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,57 +284,78 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Continued Learning" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continued Learning" />
+    <MESSAGE value="negative numbers in array" />
+    <option name="LAST_COMMIT_MESSAGE" value="negative numbers in array" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="168" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1581100732322">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="168" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1581100732322" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1578208194633">
+    <state x="574" y="111" key="#com.intellij.ide.util.MemberChooser" timestamp="1581673032597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1578208194633" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1581101198253">
+    <state x="574" y="111" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1581673032597" />
+    <state x="358" y="8" key="CommitChangelistDialog2" timestamp="1581101432949">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581101198253" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1581101198253">
+    <state x="358" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581101432949" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1581914938865">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581101198253" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1581101198248">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581914938865" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1581673137192">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581101198248" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1581101198253">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581673137192" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1581673137192">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581101198253" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1581100172168">
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581673137192" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1581673137188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581100172168" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1581100172168">
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581673137188" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1581673137192">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581100172168" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1581100172168">
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581673137192" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1581101460493">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581100172168" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1581100172168">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581101460493" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1581101460493">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581100172168" />
-    <state x="470" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1578208178511">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581101460493" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1581101460493">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="470" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1578208178511" />
-    <state x="209" y="115" key="new project wizard" timestamp="1578083847335">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581101460493" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1581101460493">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="115" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1578083847335" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581101460493" />
+    <state x="474" y="129" key="MultipleFileMergeDialog" timestamp="1581101382210">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="474" y="129" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1581101382210" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1582006791806">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582006791806" />
+    <state x="470" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1581914919060">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="470" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581914919060" />
+    <state x="209" y="115" key="new project wizard" timestamp="1581354205571">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="115" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1581354205571" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1581673132282">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1581673132282" />
   </component>
   <component name="WorksheetDefaultProjectSettings">
     <option name="compilerProfileName" value="Default" />
@@ -337,6 +373,11 @@
           <url>file://$PROJECT_DIR$/src/main/scala/Learning/ScalaForImpatient/RemoveNegative.scala</url>
           <line>27</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/Learning/Part2OOP/InheritanceAndTraits.scala</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

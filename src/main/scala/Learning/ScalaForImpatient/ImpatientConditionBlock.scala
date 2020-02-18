@@ -11,12 +11,10 @@ object ImpatientConditionBlock extends  App {
 
   def Vowel(s:String):String={
     var ch = ""
-
     for(c<- s){
       if (isVowel(c))
         ch+=c
     }
-
     ch
   }
 
