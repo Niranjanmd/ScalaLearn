@@ -28,7 +28,6 @@ object HOFsCurries extends App {
       nTimes(f, n - 1, f(x))
   }
 
-
   val Incrementer: Int => Int = _ + 1
 
   val res = nTimes(Incrementer, 5, 1)
@@ -48,7 +47,6 @@ object HOFsCurries extends App {
   println(incr10(1))
 
 
-
   //Curried Function
 
   val specialFunction: Int => (Int => Int) = x => y => x + y
@@ -57,12 +55,25 @@ object HOFsCurries extends App {
 
   println(adder(3))
 
-  def curriedFormatter(c:String)(x:Double):String = c.format(x)
+  def curriedFormatter(c: String)(x: Double): String = c.format(x)
 
-  val StandardFormat:(Double=>String) = curriedFormatter("%4.2f")
-  val precisionFormat:(Double=>String) = curriedFormatter("%10.8f")
+  val StandardFormat: (Double => String) = curriedFormatter("%4.2f")
+  val precisionFormat: (Double => String) = curriedFormatter("%10.8f")
+
+  println(curriedFormatter("%3.3f")(Math.PI))
 
   println(StandardFormat(Math.PI))
   println(precisionFormat(Math.PI))
+
+
+  def toCurry[A](fun: (A, A) => A): (A => A => A) = x => y => fun(x,y)
+
+  //    x => y => fun(x, y)
+
+  val superAdder: (Int => (Int => Int)) = toCurry((x, y) => x + y)
+
+  val add4 = superAdder(4)
+  println(add4(20))
+
 }
 
