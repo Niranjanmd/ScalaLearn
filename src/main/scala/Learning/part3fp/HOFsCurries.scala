@@ -49,11 +49,28 @@ object HOFsCurries extends App {
 
   //Curried Function
 
-  val specialFunction: Int => (Int => Int) = x => y => x + y
+  def specialFun(x: Int): (Int => Int) = {
 
-  val adder = specialFunction(23)
 
-  println(adder(3))
+    //this is curried
+    def inner(y: Int): Int = {
+      x + y
+    }
+
+    inner
+
+    //        y => x + y //this is equivalent to inner method
+
+  }
+
+  val test = specialFun(3)
+  println("test " + test(10))
+
+  val specialFunction: Int => (Int => Int) = x => y => x + y // here x is the input for outer function and y is input for inner function
+
+  val adder = specialFunction(23) // 23 is x
+
+  println(adder(3))  //3 is y
 
   def curriedFormatter(c: String)(x: Double): String = c.format(x)
 
@@ -66,7 +83,7 @@ object HOFsCurries extends App {
   println(precisionFormat(Math.PI))
 
 
-  def toCurry[A](fun: (A, A) => A): (A => A => A) = x => y => fun(x,y)
+  def toCurry[A](fun: (A, A) => A): (A => A => A) = x => y => fun(x, y)
 
   //    x => y => fun(x, y)
 
@@ -74,6 +91,7 @@ object HOFsCurries extends App {
 
   val add4 = superAdder(4)
   println(add4(20))
+
 
 }
 
